@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<meta name = "viewpoint" content = "width = device-width, initial-scale = 1">
+	<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/lumen/bootstrap.min.css">
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src = "http://code.jquery.com/jquery.min.js"></script>
+	<style>
+	.carousel-control.left, .carousel-control.right {
+		background-image:none !important;
+		filter:none !important;
+		}
+   
+	.carousel-inner .item img {
+		margin: auto;
+		height: 350px;
+		}
+		
+	.btn-circle.btn-lg {
+		width: 130px;
+		height: 130px;
+		padding: 10px 16px;
+		font-size: 15px;
+		line-height: 1.33;
+		border-radius: 70px;
+		background-color: #fff4d2;
+		border-color: #fff0c0;
+	}
+	.btn-circle.btn-xl {
+		width: 150px;
+		height: 150px;
+		padding: 10px 16px;
+		font-size: 18px;
+		line-height: 1.33;
+		border-radius: 75px;
+		background-color: #fff4d2;
+		border-color: #fff0c0;
+	}
+	.navbar {
+		background-color: #fff7df;
+		border-color: #fff0c0;
+	}
+	
+	.dropdown .dropdown-menu {
+		background-color: #fff7df;
+		border-color: #fff0c0;
+	}
+	
+	.navbar-brand {
+		padding: 3px;
+	}
+	
+	textarea {
+		width: 75%;
+		height: 50%;
+	} 
+	
+	
+	</style>
+</head>
+<body>
+<!-- begin nav -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="icon.png"></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="home.html">Home<span class="sr-only">(current)</span></a></li>
+		<li><a href="check.html">Check-In</a></li>
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="information.html">Information</a></li>
+            <li><a href="links.html">Links</a></li>
+          </ul>
+		<li><a href="distractions.html">Distractions</a></li>       
+      </ul>
+    </div>
+  </div>
+</nav> <!-- end nav -->
+<center>
+	<img src="voidhead.png">
+	<BR><BR>
+	<p id="demo"></p>
+	<br>
+	<textarea rows="15" cols="150" id="vent">
+	
+	</textarea>
+
+	<p>Click the button to display your text and see it slowly fade away!</p>
+
+	<button onclick="myFunction()">Try it!</button>
+
+	<div id="log"></div>
+
+	<script>
+		function myFunction() {
+			 var x = document.getElementById("vent").value;
+			 document.getElementById("demo").innerHTML = x;
+			 $('#demo').delay(5000).fadeOut();
+		}		
+</script>
+
+</center>
+</body>
+</html>
