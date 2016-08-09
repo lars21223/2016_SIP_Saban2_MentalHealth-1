@@ -135,15 +135,16 @@
 	
 	</textarea>
 	
-	<p>Click the button to display your text and see it slowly fade away!</p>
+	<p>Click the button to display your text and watch it disappear!</p>
 	
-	<button onclick="myFunction()">Try It!</button>
+	<button onclick="myFunction()">Let it go</button>
 	
 	<script> 
 		function myFunction() {
-			var x = document.getElementById("vent").value
-			document.getElementById("demo").innerHTML = x; 
-			$('#demo').delay(3000).fadeOut();
+			var x = document.getElementById("vent").value 
+			document.getElementById("demo").innerHTML = x;		
+			<!-- $('#demo').delay(5000).fadeOut(); -->
+			setTimeout(function(){location.reload()}, 2000);
 		}
 		
 	</script>
